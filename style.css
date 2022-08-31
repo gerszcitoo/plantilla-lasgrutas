@@ -55,6 +55,14 @@ img {
 
 /* ----------FORMULARIO----------- */
 
+.consultar {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-send {
     margin: 1rem;
 }
