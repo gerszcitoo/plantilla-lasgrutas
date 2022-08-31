@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- ---------NAVBAR-------- -->
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">Navbar</a>
+        </div>
+    </nav>
+    <!-- ---------CAROUSEL-------- -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.wpdirectorykit.com/nexproperty/wp-content/uploads/2021/09/real-estate-20-3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.wpdirectorykit.com/nexproperty/wp-content/uploads/2021/09/real-estate-20-2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.wpdirectorykit.com/nexproperty/wp-content/uploads/2021/09/real-estate-20-2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- --------COLUMNAS-------- -->
+    <div class="container below-gallery">
+        <div class="row">
+            <!-- --------COLUMNA IZQUIERDA------- -->
+            <div class="col-sm-7 pl-col-data columnas">
+                COLUMNA CONTENIDO 1
+            </div>
+            <!-- --------COLUMNA DERECHA------- -->
+            <div class="col-sm-5 pl-col-form columnas col-right">
+                <div class="pl-form">
+                    <h4>Consultar</h4>
+                    <div class="row box-btn-calls">
+                        <div class="col-sm-12 col-md-6">
+                            <a href="" class="btn btn-success">Enviá un whatsapp!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <span class="d-pld-tel">
+                            +54 9 11 1234-5678
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <h4>Enviar un mensaje</h4>
+                <form name="pl_form" id="contactForm" action="/lg_web/pl/pl-form_fn.php?form=1" method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Fecha Ingreso - Egreso</label>
+                                <input type="text" id="date_range" name="plc_fechas" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Huéspedes</label>
+                                <input type="text" id="plc_huespedes" name="plc_paxs" class="form-control ncs-input" placeholder readonly>
+                                <div class="relative">
+                                    <div class="NCS parent" style="display: none; left: 15px;"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre completo *</label>
+                                <input type="text" id="plc_nombre" name="plc_nombre" class="form-control" placeholder="Tu nombre y apellido *" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" id="plc_email" name="plc_email" class="form-control" placeholder="Tu Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Teléfono</label>
+                                <input type="text" id="plc_tel" name="plc_tel" class="form-control" placeholder="Tu teléfono" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Consulta *</label>
+                                <textarea class="form-control" name="plc_msj" id="plc_msj" cols="30" rows="10" placeholder="Tu consulta *" required></textarea>
+                                <button type="button" class="btn btn-success btn-submit" onclick="pl.sendForm();">ENVIAR CONSULTA</button>
+                            </div>
+                        </div>
+                        <div align="center">(*) campos requeridos.</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- -------BOTÓN WHATSAPP------- -->
+    <a class="btn-whatsapp" href="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" alt="">
+    </a>
+
+    <!-- ---------SCRIPT-------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+</html>

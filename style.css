@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: overlay;
+}
+
+img {
+    pointer-events: none;
+}
+
+
+/* ---------SCROLL--------- */
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* ----------COLUMNAS--------- */
+
+.below-gallery {
+    margin: 1rem;
+    text-align: center;
+}
+
+.columnas {
+    border-radius: 5px;
+    padding-top: 1rem;
+}
+
+.col-right {
+    background-color: rgb(239, 239, 239);
+}
+
+
+/* ----------FORMULARIO----------- */
+
+.btn-send {
+    margin: 1rem;
+}
+
+
+/* ----------BTN WHATSAPP------- */
+
+.btn-whatsapp {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.btn-whatsapp img {
+    height: 60px;
+    width: 60px;
+}
